@@ -3,6 +3,32 @@
 <head>
 <title>S.S.Stories</title>
 <body style="background-color:black;">
+<script language="JavaScript">
+/*function check(e)
+{
+alert(e.keyCode);
+}*/
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.onkeydown = function (e) {
+      
+      if(e.keyCode == 123) {
+          alert("F12 disabled");
+          return false;
+      }
+      
+      if(e.ctrlKey && e.keyCode == 67) {
+          alert("ctrl + c disabled");
+          return false;
+      }
+      
+      if(e.ctrlKey && e.keyCode == 85) {
+          alert("ctrl + u disable");
+          return false;
+      }
+      
+}     
+</script>
 <style>
 body {
   font-family: Copperplate, Papyrus, fantasy;
